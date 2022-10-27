@@ -11,3 +11,23 @@
     outline: none;
     box-shadow: none;
 }
+.icon-garbage, .icon-pencil{
+    color: #ABB2B9;
+}
+.icon-pencil:hover{
+    color: #3498DB;
+}
+.icon-garbage:hover{
+    color: #17202A;
+}
+.btn-newTask{
+    color: #7b828a;
+    font-size: 14px;
+}
+.btn-newTask:hover{
+    color: #585f68;
+}
+.btn-newTask:focus{
+    outline: none;
+    box-shadow: none;
+}

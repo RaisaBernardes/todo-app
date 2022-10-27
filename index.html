@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
-    <!--font aewsome-->
+    <!--font awesome-->
     <script src="https://kit.fontawesome.com/ff3f97a4df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css"/>
     <title>Todo-list</title>
@@ -39,7 +39,9 @@
                                 <input type="checkbox">
                                 <button class="btn text-dark text-start border-0 btnNote btn-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                     Wash the dishes
-                                </button>                                
+                                </button> 
+                                <a href="#" data-bs-toggle="tooltip" title="edit"><i class="fa-solid fa-pencil pt-3 pe-3 fa-sm icon-pencil"></i></a> 
+                                <a href="#" data-bs-toggle="tooltip" title="delete"><i class="fa-solid fa-trash pt-3 fa-sm icon-garbage"></i></a>                              
                             </div>
                             <div class="collapse show " id="collapseOne" data-bs-parent="#accordion">
                                 <div class="card-body">
@@ -47,12 +49,14 @@
                                 </div>
                             </div>
                         </div>
-                            <!--repetir todos aqui-->
+                        <div>
+                            <button type="button" class="btn btn-newTask">+ New task</button>
                         </div>
-                    
-                    
-                </div>
-                
+
+
+                            <!--repetir todos aqui-->
+                        </div>  
+                </div>  
             </div>
         </div>
     </section>
