@@ -1,0 +1,13 @@
+
+.btnNote{
+    background: none;
+   /* padding-right: 300px;*/
+}
+
+.btn-css{
+    width: 100%; 
+}
+.btn-css:focus{
+    outline: none;
+    box-shadow: none;
+}
