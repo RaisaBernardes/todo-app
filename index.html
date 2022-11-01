@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/ff3f97a4df.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <!--files-->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script type="text/javascript" src="assets/js/lib/jQuery.js"></script>
     <title>Todo-list</title>
 </head>
 
@@ -34,10 +36,10 @@
             <div class="row justify-content-center"> 
                 <div class="col-md-6 m-5">
                     <div class="accordion">
-                        <div class="card">
-                            <div class="card-header d-flex">                               
+                        <div class="card" id="todoList">
+                            <!-- <div class="card-header d-flex">                               
                                 <input type="checkbox">
-                                <button class="btn text-dark text-start border-0 btnNote btn-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <button class="btn text-dark text-start border-0 btn-css" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                     Wash the dishes
                                 </button> 
                                 <a href="#" data-bs-toggle="tooltip" title="edit"><i class="fa-solid fa-pencil pt-3 pe-3 fa-sm icon-pencil"></i></a> 
@@ -47,24 +49,22 @@
                                 <div class="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ante est, pharetra nec consequat id
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div>
-                            <button type="button" class="btn btn-newTask">+ New task</button>
-                        </div>
-
-
                             <!--repetir todos aqui-->
-                        </div>  
+                    </div>  
+                    <div>
+                        <button type="button" class="btn btn-newTask" id="btnNewTask">+ New task</button>
+                    </div>
                 </div>  
             </div>
         </div>
     </section>
    
 
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

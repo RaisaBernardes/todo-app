@@ -1,10 +1,6 @@
 
-.btnNote{
-    background: none;
-   /* padding-right: 300px;*/
-}
-
 .btn-css{
+    background: none;
     width: 100%; 
 }
 .btn-css:focus{
@@ -21,7 +17,7 @@
     color: #17202A;
 }
 .btn-newTask{
-    color: #7b828a;
+    color: #8d959e;
     font-size: 14px;
 }
 .btn-newTask:hover{
@@ -31,3 +27,4 @@
     outline: none;
     box-shadow: none;
 }
+
