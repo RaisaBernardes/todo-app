@@ -18,29 +18,32 @@
 
 */
 
-//DELETING
-$(document).ready(function(event){
-    $("#todoList").on('click', '.icon-garbage', function(){
-        $(this).parent().fadeOut(200, function(){
-            $(this).parent().remove();
-        })  
-        event.stopPropagation();
-    }) 
-})
+//STRIKE THROUGH FUNCTIONALITY
+
+//     $("#todoList").on("click", "#checkboxId", function(){
+//         if ( $("#checkboxId").is(":checked") ){
+//             $("#cardHeader").toggleClass("done")
+//         }
+//     })
+// })
+
+
 
 
 //CREATING
-
 $(document).ready(function(){
+    
+    let varInput = $(`<input type="text">`);
 
     $("#btnNewTask").click(function(){
 
-        let varInput = $(`<input type="text">`);
         $("#todoList").append(varInput);
+
         $(varInput).keypress(function(event){
     
             let task = $(varInput).val();
-            if (event.which === 13){
+
+            if (task.length != 0 && event.which === 13){
     
                 $("#todoList").append(`
                     <div class="card-header d-flex" id="cardHeader">                               
@@ -54,13 +57,20 @@ $(document).ready(function(){
                 `)
                 $(varInput).remove();
             }
+            $(varInput).val("");
         })  
     })
 })
 
 
-
-
-
+//DELETING
+$(document).ready(function(event){
+    $("#todoList").on('click', '.icon-garbage', function(){
+        $(this).parent().fadeOut(200, function(){
+            $(this).parent().remove();
+        })  
+       // event.stopPropagation();
+    }) 
+})
 
 

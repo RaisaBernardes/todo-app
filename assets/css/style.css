@@ -1,4 +1,8 @@
 
+.done{
+    text-decoration: line-through;
+}
+
 .btn-css{
     background: none;
     width: 100%; 
