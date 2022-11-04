@@ -15,8 +15,6 @@
 */
 
 
-
-
 //CREATING
 $(document).ready(function(){
     
