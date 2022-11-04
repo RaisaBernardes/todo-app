@@ -1,4 +1,3 @@
-
 /*
 <div class="card-header d-flex">                               
             <input type="checkbox">
@@ -8,24 +7,12 @@
             <a href="#" data-bs-toggle="tooltip" title="edit"><i class="fa-solid fa-pencil pt-3 pe-3 fa-sm icon-pencil"></i></a> 
             <a href="#" data-bs-toggle="tooltip" title="delete"><i class="fa-solid fa-trash pt-3 fa-sm icon-garbage"></i></a>                              
 </div>
-
-
 <div class="collapse show " id="collapseOne" data-bs-parent="#accordion">
     <div class="card-body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ante est, pharetra nec consequat id
     </div>
 </div>
-
 */
-
-//STRIKE THROUGH FUNCTIONALITY
-
-//     $("#todoList").on("click", "#checkboxId", function(){
-//         if ( $("#checkboxId").is(":checked") ){
-//             $("#cardHeader").toggleClass("done")
-//         }
-//     })
-// })
 
 
 
@@ -33,7 +20,7 @@
 //CREATING
 $(document).ready(function(){
     
-    let varInput = $(`<input type="text">`);
+    let varInput = $(`<input type="text" id="inputId" value="">`);
 
     $("#btnNewTask").click(function(){
 
@@ -43,7 +30,7 @@ $(document).ready(function(){
     
             let task = $(varInput).val();
 
-            if (task.length != 0 && event.which === 13){
+            if (task.length > 0 && event.which === 13){
     
                 $("#todoList").append(`
                     <div class="card-header d-flex" id="cardHeader">                               
@@ -57,8 +44,9 @@ $(document).ready(function(){
                 `)
                 $(varInput).remove();
             }
-            $(varInput).val("");
+            
         })  
+        $(varInput).val("");
     })
 })
 
@@ -73,4 +61,11 @@ $(document).ready(function(event){
     }) 
 })
 
-
+//UPDATE
+$(document).ready(function(){
+    $("#todoList").on('click', '.icon-pencil', function(){
+        
+        //-----TO DO LATER ON-----
+        
+    })  
+})
