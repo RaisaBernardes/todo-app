@@ -1,10 +1,10 @@
 'use strict'
 
-let database = [
-    {'task': 'Task 1', 'status': ''},
-    {'task': 'Task 2', 'status': 'checked'},
-    {'task': 'Task 3', 'status': 'checked'}
-]
+
+
+const getDatabase = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
+const setDatabase = (database) => localStorage.setItem('todoList', JSON.stringify(database));
+
 
 const createItem = (text, status, index) =>{
     const item = document.createElement('label');
@@ -26,6 +26,7 @@ const cleanTasks  = () => {
 
 const render = () => {
     cleanTasks();
+    const database = getDatabase();
     database.forEach ((item, index) => createItem(item.task, item.status, index))
 }
 
@@ -33,27 +34,26 @@ const insertItem = (event) => {
     const pressedKey = event.key;
     const text = event.target.value;
     if(pressedKey === 'Enter'){
-        database.push ({'task': text, 'status': ''})
+        const database = getDatabase(); //read database
+        database.push ({'task': text, 'status': ''}) //update database
+        setDatabase(database); //send information to database
         render();
         event.target.value = '';
     }
 }
 
 const removeItem = (index) => {
+    const database = getDatabase();
     database.splice (index, 1);
+    setDatabase(database);
     render();
 }
 
 const updateItem = (index) => {
-    if(database[index].status === ''){
-        database[index].status = 'checked';
-        render();
-    }else{
-        database[index].status = '';
-        render();
-    }
-    //database[index].status = database[index].status === '' ? 'checked' : '';
-    //render();
+    const database = getDatabase();
+    database[index].status = database[index].status === '' ? 'checked' : '';
+    setDatabase(database);
+    render();
 }
 
 //atualizando banco após interação com a interface
