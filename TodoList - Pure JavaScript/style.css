@@ -71,11 +71,16 @@ body {
     font: inherit;
 }
 
-.todo__item > input[type='button'],
 .todo__item > input[type='checkbox'] {
     width: 15px;
     height: 15px;
     font: 10px;
+    margin: 20px;
+}
+.todo__item > input[type='button']{
+    width: 20px;
+    height: 20px;
+    font: 20px;
     margin: 20px;
 }
 
